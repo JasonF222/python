@@ -1,0 +1,20 @@
+<h1 style="text-align: center; color:black; margin-top: 5%; font-size: 46pt; font-family: cursive;">Welcome!</h1>
+<style>
+    .box {
+        background-color: var(--color);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), var(--color));
+    }
+
+    .box:hover {
+        background-color: black;
+        transform: scale(1.3) rotate(45deg);
+    }
+</style>
+
+
+<div class="container" style="display:flex; justify-content: center; gap: 30px; flex-wrap: wrap; width: 80vw; margin: auto;">
+{% for x in range(0, times): %}
+<div class="box" style="border: 3px solid black; width: 200px; height: 200px; --color: {{ color }}
+; box-shadow: 5px 5px 5px black; "></div>
+{% endfor %}
+</div>
