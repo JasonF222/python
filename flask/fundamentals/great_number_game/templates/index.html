@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <h1>WELCOME TO THE GREAT NUMBER GAME!!!</h1>
+    <h2>Current LeaderBoard:</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Number of attempts</th>
+        </tr>
+        {% for x in l1: %}
+            <tr>
+                <td>{{ x }}</td>
+                <td>{{ l1[x] }}</td>
+            </tr>
+        {% endfor %}
+        {% for x in l2: %}
+            <tr>
+                <td>{{ x }}</td>
+                <td>{{ l2[x] }}</td>
+            </tr>
+        {% endfor %}
+        {% for x in l3: %}
+            <tr>
+                <td>{{ x }}</td>
+                <td>{{ l3[x] }}</td>
+            </tr>
+        {% endfor %}
+        {% for x in l4: %}
+            <tr>
+                <td>{{ x }}</td>
+                <td>{{ l4[x] }}</td>
+            </tr>
+        {% endfor %}
+        {% for x in l5: %}
+            <tr>
+                <td>{{ x }}</td>
+                <td>{{ l5[x] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <h3>I am thinking of a number between 1 and 100...</h3>
+    <h3>Can you guess what it is?</h3>
+    <form action="/numcheck" method="post">
+        <input type="text" name="guess" id="guess">
+        <button type="submit">Lock in your answer!</button>
+        <p>REMEMBER:  YOU GET 5 GUESSES!!</p>
+    </form>
+</body>
+</html>
